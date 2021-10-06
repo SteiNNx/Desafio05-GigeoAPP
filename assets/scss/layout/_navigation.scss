@@ -1,1 +1,112 @@
 /** __Navigation */
+/** __Navigation */
+.navbar {
+    align-items: center;
+    box-sizing: inherit;
+    display: flex;
+    font-weight: $font-weight-700;
+    justify-content: center;
+    padding: 0rem;
+    position: relative;
+
+    &__container {
+        align-items: center;
+        display: flex;
+        flex-wrap: inherit;
+        justify-content: space-between;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 1.75rem 0 0.25rem;
+        width: 100%;
+
+        /** Breakpoints */
+        @include breakpoint("Celular") {
+            padding: 0 0.25rem 0 0.25rem;
+        }
+
+        &__brand {
+            align-items: center;
+            color: $white;
+            display: flex;
+            margin: 0.2rem;
+            padding: 0.2rem;
+            text-decoration: none;
+            white-space: nowrap;
+
+            img {
+                width: 13rem;
+                height: 5rem;
+
+                /** Breakpoints */
+                @include breakpoint("Celular") {
+                    width: 8rem;
+                    height: 3.8rem;
+                }
+                @include breakpoint("Tablet") {
+                    width: 10rem;
+                    height: 4rem;
+                }
+            }
+        }
+        &__toggler {
+            background-color: $white;
+            border: 1px solid $white;
+            border-radius: 0.25rem;
+            border-color: $white;
+            display: none;
+            font-size: 1.25rem;
+            padding: 0.6rem 0.75rem 0.1rem 0.75rem;
+
+            /** Breakpoints */
+            @include breakpoint("Celular") {
+                display: block;
+            }
+
+            span {
+                height: 1.5em;
+                vertical-align: middle;
+                width: 1.5em;
+            }
+        }
+        &__collapse {
+            align-items: center;
+            display: flex;
+            flex-basis: auto;
+            flex-grow: 1;
+            margin: 0.2rem;
+            padding: 0.2rem;
+            width: 100%;
+
+            /** Breakpoints */
+            @include breakpoint("Celular") {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                list-style: none;
+                margin-bottom: 0;
+                margin-left: auto;
+                margin-top: 0;
+                padding-left: 0;
+                width: 100%;
+
+                li {
+                    list-style: none;
+                    a {
+                        color: $black;
+                        display: block;
+                        list-style: none;
+                        padding: 0.5rem 1rem;
+                        padding-right: 0.5rem;
+                        padding-left: 0.5rem;
+                        text-decoration: none;
+                        transition: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,1 +1,13 @@
 /** __Mixins */
+
+@mixin breakpoint($point) {
+    @if $point == 'Celular' {
+        @media (min-width: 0px) and (max-width: $width-sm) {
+            @content;
+        }
+    } @else if $point == 'Tablet' {
+        @media (min-width: $width-sm) and (max-width: $width-lg) {
+            @content;
+        }
+    }
+}

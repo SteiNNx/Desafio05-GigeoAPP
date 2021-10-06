@@ -1,0 +1,27 @@
+/** Avatar */
+.avatar {
+    display: flex;
+
+    &__img_avatar {
+        border: 1px solid lightblue;
+        border-radius: 50%;
+        height: 8rem;
+        margin: 0.75rem;
+        width: 8rem;
+
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin: 0.75rem;
+        &__label_name {
+            
+        }
+        &__label_follow {
+        }
+    }
+}

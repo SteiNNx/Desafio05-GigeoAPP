@@ -5,23 +5,55 @@
     &__img_avatar {
         border: 1px solid lightblue;
         border-radius: 50%;
-        height: 8rem;
+        height: 6rem;
         margin: 0.75rem;
-        width: 8rem;
+        width: 6rem;
 
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+
+        /** Breakpoints */
+        @include breakpoint("Celular") {
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+        @include breakpoint("Tablet") {
+            height: 5rem;
+            width: 5rem;
+        }
     }
+
     &__text {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         margin: 0.75rem;
+
         &__label_name {
-            
+            font-size: $font-size-xxl;
+            font-weight: $font-weight-700;
+            margin: 0.4rem 0.2rem 0.2rem 0.2rem;
+
+            /** Breakpoints */
+            @include breakpoint("Celular") {
+                font-size: $font-size-xl;
+            }
         }
+
         &__label_follow {
+            font-weight: $font-weight-400;
+            margin: 0.4rem 0.2rem 0.2rem 0.7rem;
+            opacity: 0.5;
+
+            /** Breakpoints */
+            @include breakpoint("Celular") {
+                font-size: $font-size-xs;
+            }
+            @include breakpoint("Tablet") {
+                font-size: $font-size-md;
+            }
         }
     }
 }

@@ -9,7 +9,7 @@
 
     /** Breakpoints */
     @include breakpoint("Celular") {
-        display: none;
+        height: 7rem;
     }
     @include breakpoint("Tablet") {
         height: 10rem;

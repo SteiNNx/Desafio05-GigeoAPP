@@ -1,11 +1,24 @@
 /** __Buttons */
 .buttons {
     display: flex;
+
+    /** Support Browsers */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: end;
 
     @include breakpoint("Tablet") {
         flex-direction: column;
         align-items: flex-end;
+
+        /** Support Browsers */
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
     }
 
     &__btn-gigeoapp {

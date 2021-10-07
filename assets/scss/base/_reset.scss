@@ -1,8 +1,11 @@
 /** __Reset */
 * {
     box-sizing: border-box;
+    
+    /** Support Browsers */
+    -webkit-box-sizing: border-box;
 }
-body{
+body {
     font-family: $lato;
     font-weight: $font-weight-300;
     margin: 0 auto;

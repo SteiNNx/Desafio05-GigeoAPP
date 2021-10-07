@@ -34,7 +34,6 @@
         display: flex;
         margin: 0.75rem;
 
-        /** Support Browsers */
         display: -webkit-box;
         display: -ms-flexbox;
         -webkit-box-orient: vertical;
@@ -54,6 +53,9 @@
             @include breakpoint("Celular") {
                 font-size: $font-size-xl;
             }
+            @include breakpoint("Tablet") {
+                font-size: $font-size-lg;
+            }
         }
 
         &__label_follow {
@@ -66,7 +68,7 @@
                 font-size: $font-size-xs;
             }
             @include breakpoint("Tablet") {
-                font-size: $font-size-md;
+                font-size: $font-size-sm;
             }
         }
     }

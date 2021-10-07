@@ -14971,7 +14971,6 @@ readers do not read off random characters that represent icons */
 * {
   box-sizing: border-box;
   /** Support Browsers */
-  -webkit-box-sizing: border-box;
 }
 
 body {
@@ -15202,7 +15201,6 @@ body {
 .avatar__text {
   display: flex;
   margin: 0.75rem;
-  /** Support Browsers */
   display: -webkit-box;
   display: -ms-flexbox;
   -webkit-box-orient: vertical;
@@ -15224,6 +15222,11 @@ body {
     font-size: 20px;
   }
 }
+@media (min-width: 576px) and (max-width: 992px) {
+  .avatar__text__label_name {
+    font-size: 18px;
+  }
+}
 .avatar__text__label_follow {
   font-weight: 400;
   margin: 0.4rem 0.2rem 0.2rem 0.7rem;
@@ -15237,7 +15240,7 @@ body {
 }
 @media (min-width: 576px) and (max-width: 992px) {
   .avatar__text__label_follow {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

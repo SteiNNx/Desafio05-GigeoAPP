@@ -1,8 +1,9 @@
 /** __Reset */
 * {
     box-sizing: border-box;
-    
+
     /** Support Browsers */
+    -webkit-box-sizing: border-box;
 }
 body {
     font-family: $lato;

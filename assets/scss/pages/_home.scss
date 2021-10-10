@@ -12,11 +12,26 @@
     &__row {
         display: flex;
         margin: 2rem 2rem 0 2rem;
+        flex-flow: row wrap;
+        justify-content: space-around;
 
+        /** Support Browsers */
         display: -webkit-box;
         display: -ms-flexbox;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        -ms-flex-pack: distribute;
+
+        /** Breakpoints */
+        @include breakpoint("Celular") {
+            flex-flow: column wrap;
+
+            /** Support Browsers */
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: column wrap;
+        }
 
         &__col {
             -webkit-box-flex: 1;
@@ -25,6 +40,20 @@
             max-width: 100%;
             padding: 0.75rem 0.5rem 0.75rem 0.5rem;
             width: 100%;
+        }
+
+        &__col_grid {
+            width: 25%;
+            padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+
+            /** Breakpoints */
+            @include breakpoint("Celular") {
+                width: 100%;
+            }
+
+            @include breakpoint("Tablet") {
+                width: 50%;
+            }
         }
     }
 }

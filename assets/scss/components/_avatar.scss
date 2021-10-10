@@ -6,6 +6,18 @@
     display: -webkit-box;
     display: -ms-flexbox;
 
+    /** Breakpoints */
+    @include breakpoint("Celular") {
+        display: flex;
+        justify-content: center;
+
+        /** Support Browsers */
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+    }
+
     &__img_avatar {
         border: 1px solid lightblue;
         border-radius: 50%;
@@ -33,16 +45,17 @@
     &__text {
         display: flex;
         margin: 0.75rem;
+        flex-direction: column;
+        justify-content: center;
 
+        /** Support Browsers */
         display: -webkit-box;
         display: -ms-flexbox;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
-        flex-direction: column;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center;
 
         &__label_name {
             font-size: $font-size-xxl;

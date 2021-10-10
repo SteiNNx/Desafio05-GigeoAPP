@@ -1,7 +1,11 @@
-/** __Grid */
+/** Utils */
 .ds-none-sm {
     /** Breakpoints */
     @include breakpoint("Celular") {
+        display: none;
+    }
+    /** Breakpoints */
+    @include breakpoint("Tablet") {
         display: none;
     }
 }

@@ -6,13 +6,13 @@ Desarrollo Desafio 5 Modulo 02 CSS Avanzado
 * Directo con sass
 ```bash
       $ pwd
-      $ path/blog-barbershop
+      $ path/gigeoapp
       $ sass --style=expanded --no-source-map assets/scss/main.scss assets/css/main.css
 ```
 * Directo con npm script
 ```bash
       $ pwd
-      $ path/blog-barbershop
+      $ path/gigeoapp
       $ npm run sass
 ```
 
